@@ -1,0 +1,22 @@
+{
+  "name": "mls-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainandWae/MLS-Practice.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/RainandWae/MLS-Practice/issues"
+  },
+  "homepage": "https://github.com/RainandWae/MLS-Practice#readme",
+  "dependencies": {
+    "openmls-wasm": "^0.1.0"
+  }
+}
