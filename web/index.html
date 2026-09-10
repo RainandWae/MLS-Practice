@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>MLS Practice</title>
+<style>
+  body { font-family: monospace; background: #fff; color: #000; margin: 0; }
+  h1 { font-size: 16px; border-bottom: 1px solid #000; padding: 8px; margin: 0; }
+  .columns { display: flex; }
+  .column { flex: 1; border-right: 1px solid #000; padding: 8px; min-height: 400px; }
+  .column:last-child { border-right: none; }
+  .column h2 { font-size: 14px; margin: 0 0 8px; }
+  .log { border-top: 1px solid #000; padding-top: 8px; white-space: pre-wrap; word-break: break-all; }
+  .log div { margin-bottom: 6px; }
+  input { font-family: monospace; width: 65%; }
+  button { font-family: monospace; }
+</style>
+</head>
+<body>
+  <h1>MLS Practice — Alice / Bob DM, backend never sees plaintext</h1>
+  <div class="columns">
+    <div class="column">
+      <h2>Alice</h2>
+      <input id="alice-input" placeholder="type a message" />
+      <button id="alice-send">Send</button>
+      <div id="alice-log" class="log"></div>
+    </div>
+    <div class="column">
+      <h2>On the wire (what a backend would store)</h2>
+      <div id="wire-log" class="log"></div>
+    </div>
+    <div class="column">
+      <h2>Bob</h2>
+      <input id="bob-input" placeholder="type a message" />
+      <button id="bob-send">Send</button>
+      <div id="bob-log" class="log"></div>
+    </div>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -8,10 +8,29 @@ touching Gachahub's actual chat code.
 
 ## Run it
 
+Console version:
+
 ```bash
 npm install
 node --experimental-wasm-modules practice.mjs
 ```
+
+Browser version (same Alice/Bob DM, click Send instead of reading console output):
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the printed `localhost` URL. Two columns, Alice and Bob, plus a middle
+column showing exactly what a backend would see: raw ciphertext, nothing else.
+
+**Known limit (this only works for 2 people):** the `openmls-wasm` package used
+here is an early/experimental binding. It has no way for an existing member to
+process a Commit someone else made, so adding a third person breaks the first
+member's ability to decrypt anything after that point. Real group support
+needs building the actual `openmls` Rust project to WASM directly, which is
+the current next step.
 
 ## What it does
 
